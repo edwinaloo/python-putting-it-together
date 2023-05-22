@@ -1,19 +1,18 @@
-#!/usr/bin/env python3
-
 class Shoe:
     def __init__(self, brand, size):
         self.brand = brand
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
+        self._size = None  # private variable to store size
+        # Set the size using the setter method
         self.size = size
-        self.condition = "New"
-        self.is_cobbled = False
-
+    @property
+    def size(self):
+        return self._size
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            print("size must be an integer")
+        else:
+            self._size = value
     def cobble(self):
         print("Your shoe is as good as new!")
         self.condition = "New"
-        self.is_cobbled = True
-
-stan_smith = Shoe("Addidas", 9)
-stan_smith.cobble()
-
