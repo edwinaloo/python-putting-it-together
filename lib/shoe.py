@@ -9,11 +9,11 @@ class Shoe:
         self.condition = "New"
         self.is_cobbled = False
 
-    def repair(self):
-        print("The shoe has been repaired.")
+    def cobble(self):
+        print("Your shoe is as good as new!")
         self.condition = "New"
         self.is_cobbled = True
 
-
-
+stan_smith = Shoe("Addidas", 9)
+stan_smith.cobble()
 

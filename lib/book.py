@@ -13,14 +13,14 @@ class Book:
 
 # Test the Book class
 try:
-    book = Book("Harry Potter", 500)
+    book = Book("Harry Potter", 272)
 except TypeError as e:
     print(str(e))
 
 # expected_message = "page_count must be an integer"
 # assert error_message == expected_message, f"Error message mismatch: {error_message} != {expected_message}
 
-book = Book("Harry Potter", 500)
+book = Book("Harry Potter", 69)
 book.turn_page()
 pass
     
